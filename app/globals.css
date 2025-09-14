@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #0f172a; /* Dark slate background */
+  --foreground: #f1f5f9; /* Light gray text */
+  --card: #1e293b; /* Dark slate card background */
+  --card-foreground: #e2e8f0; /* Light gray card text */
+  --popover: #1e293b; /* Dark slate popover background */
+  --popover-foreground: #f1f5f9; /* Light gray popover text */
+  --primary: #60a5fa; /* Soft blue primary */
+  --primary-foreground: #0f172a; /* Dark text on primary */
+  --secondary: #94a3b8; /* Muted slate secondary */
+  --secondary-foreground: #0f172a; /* Dark text on secondary */
+  --muted: #1e293b; /* Dark slate muted background */
+  --muted-foreground: #94a3b8; /* Light slate muted text */
+  --accent: #38bdf8; /* Sky blue accent */
+  --accent-foreground: #0f172a; /* Dark text on accent */
+  --destructive: #f87171; /* Soft red destructive */
+  --destructive-foreground: #0f172a; /* Dark text on destructive */
+  --border: #334155; /* Medium slate border */
+  --input: #1e293b; /* Dark slate input background */
+  --ring: #60a5fa; /* Soft blue focus ring */
+  --chart-1: #60a5fa; /* Soft blue chart color */
+  --chart-2: #34d399; /* Emerald chart color */
+  --chart-3: #fbbf24; /* Amber chart color */
+  --chart-4: #a78bfa; /* Violet chart color */
+  --chart-5: #9ca3af; /* Gray chart color */
+  --radius: 0.5rem; /* Moderate border radius */
+  --sidebar: #1e293b; /* Dark slate sidebar background */
+  --sidebar-foreground: #e2e8f0; /* Light gray sidebar text */
+  --sidebar-primary: #60a5fa; /* Soft blue sidebar primary */
+  --sidebar-primary-foreground: #0f172a; /* Dark sidebar primary text */
+  --sidebar-accent: #38bdf8; /* Sky blue sidebar accent */
+  --sidebar-accent-foreground: #0f172a; /* Dark sidebar accent text */
+  --sidebar-border: #334155; /* Medium slate sidebar border */
+  --sidebar-ring: #60a5fa; /* Soft blue sidebar focus ring */
+}
+
+[data-theme="light"] {
+  --background: #fafafa; /* Soft off-white background */
+  --foreground: #1f2937; /* Dark gray text for good contrast */
+  --card: #f8fafc; /* Very light gray card background */
+  --card-foreground: #374151; /* Medium dark gray card text */
+  --popover: #ffffff; /* White popover background */
+  --popover-foreground: #1f2937; /* Dark gray popover text */
+  --primary: #3b82f6; /* Calm blue primary */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #64748b; /* Muted blue-gray secondary */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #f1f5f9; /* Light muted background */
+  --muted-foreground: #64748b; /* Medium gray muted text */
+  --accent: #0ea5e9; /* Sky blue accent */
+  --accent-foreground: #ffffff; /* White text on accent */
+  --destructive: #ef4444; /* Soft red destructive */
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #e2e8f0; /* Light gray border */
+  --input: #ffffff; /* White input background */
+  --ring: #3b82f6; /* Blue focus ring */
+  --chart-1: #3b82f6; /* Blue chart color */
+  --chart-2: #10b981; /* Green chart color */
+  --chart-3: #f59e0b; /* Amber chart color */
+  --chart-4: #8b5cf6; /* Purple chart color */
+  --chart-5: #6b7280; /* Gray chart color */
+  --sidebar: #f8fafc; /* Light sidebar background */
+  --sidebar-foreground: #374151; /* Dark sidebar text */
+  --sidebar-primary: #3b82f6; /* Blue sidebar primary */
+  --sidebar-primary-foreground: #ffffff; /* White sidebar primary text */
+  --sidebar-accent: #0ea5e9; /* Sky blue sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White sidebar accent text */
+  --sidebar-border: #e2e8f0; /* Light sidebar border */
+  --sidebar-ring: #3b82f6; /* Blue sidebar focus ring */
+}
+
+/* Tailwind CSS compatible theme variables */
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: var(--ring);
+    outline-opacity: 0.5;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .game-card-3d {
+    transition: transform 0.15s ease;
+    will-change: auto;
+  }
+
+  .game-card-3d:hover {
+    transform: translateY(-2px);
+  }
+}
